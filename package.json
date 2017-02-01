@@ -1,0 +1,21 @@
+{
+  "name": "dotaviz_react_redux",
+  "version": "1.0.0",
+  "description": "This is a data visualization tool to assist draft characters in the videogame dota2.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "data",
+    "visualization",
+    "dota2",
+    "react",
+    "redux",
+    "node",
+    "express",
+    "mysql"
+  ],
+  "author": "Chris Stair",
+  "license": "ISC"
+}
