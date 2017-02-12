@@ -7,7 +7,11 @@
     "test": "test",
     "start": "npm run build && node server/server.js",
     "build": "webpack",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "seed": "knex --cwd ./server/database/ seed:run",
+    "db:migrate:make": "knex --cwd ./server/database/ migrate:make",
+    "db:up": "knex --cwd ./server/database/ migrate:latest",
+    "db:down": "knex --cwd ./server/database/ migrate:rollback"
   },
   "keywords": [
     "data",
@@ -36,6 +40,7 @@
     "express": "^4.14.1",
     "knex": "^0.12.6",
     "lodash": "^4.17.4",
+    "mysql": "^2.13.0",
     "path": "^0.12.7",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
@@ -47,8 +52,8 @@
     "webpack": "^1.14.0"
   },
   "config": {
-   "commitizen": {
-       "path": "node_modules/cz-conventional-changelog"
-   }
- }
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
 }
