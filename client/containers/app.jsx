@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Table from './table';
+import DotaTable from './table';
 import Graph from './graph';
 
 const App = () => (

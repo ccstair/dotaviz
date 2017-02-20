@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import Reactable from 'reactable';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { getChartData, setSelectedUser, setSelectedClass } from '../actions/index';
+import { getHeroData } from '../actions/index';
+
 let Table = Reactable.Table;
 
 class DotaTable extends Component {
 
   componentDidMount() {
-
+    getHeroData();
   }
 
   render() {
@@ -19,4 +21,18 @@ class DotaTable extends Component {
   }
 }
 
-export default DotaTable;
+DotaTable.propTypes = {
+  heroData: React.PropTypes.arrayOf(React.PropTypes.object),
+};
+
+let mapDispatchToProps = function(dispatch) {
+  return bindActionCreators({ getHeroData }, dispatch);
+};
+
+let mapStateToProps = function(state) {
+  return {
+    heroData: state.heroData,
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(DotaTable);
