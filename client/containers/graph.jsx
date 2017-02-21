@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const Graph = () => (
   <div>
-    <h1>Sups withchu</h1>
+    <h1>Sups witchu</h1>
   </div>
 );
 

@@ -1,11 +1,13 @@
 import { combineReducers, applyMiddleware, createStore } from 'redux';
 import promise from 'redux-promise';
 import createLogger from 'redux-logger';
-import HeroDataReducer from './hero_data_reducer';
+import HeroImagesReducer from './hero_images_reducer';
+import HeroLineupReducer from './add_to_lineup_reducer';
 
 
 const rootReducer = combineReducers({
-    heroData: HeroDataReducer,
+    heroImages: HeroImagesReducer,
+    heroLineup: HeroLineupReducer,
 });
 
 const logger = createLogger();
