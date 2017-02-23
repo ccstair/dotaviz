@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getHeroImages, getHeroAttributes } from '../actions/index';
 
-let Table = Reactable.Table;
+const Table = Reactable.Table;
 
 class DotaTable extends Component {
 

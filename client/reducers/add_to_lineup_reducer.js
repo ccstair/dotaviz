@@ -16,7 +16,7 @@ export default function (state = [], action) {
       }
       state.pop();
       return [...state, action.payload.data];
-      }
+    }
     default:
       return state;
   }

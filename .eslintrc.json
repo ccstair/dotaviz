@@ -1,5 +1,14 @@
 {
-    "parserOptions": {
-        "sourceType": "module"
-    }
+  "extends": "airbnb",
+  "rules": {
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ]
+  },
+  "parserOptions": {
+      "sourceType": "module"
+  }
 }
