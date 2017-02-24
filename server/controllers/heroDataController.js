@@ -1,9 +1,9 @@
-const HeroData = require('../models/heroDataModel');
+const HeroImages = require('../models/heroImagesModel');
+const HeroAttributes = require('../models/heroAttributesModel');
 
 const heroDataController = {
-  getAll(req, res) {
-    console.log('made it to hero data controller')
-    HeroData.fetchAll(
+  getAllImages(req, res) {
+    HeroImages.fetchAll(
       { withRelated: [], }
     )
     .then(heroData => {
@@ -15,7 +15,18 @@ const heroDataController = {
       res.sendStatus(500);
     });
   },
-
+  getSingleHeroAttributes({ params: { id } }, res) {
+    HeroAttributes.forge({ id })
+    .fetch()
+    .then(heroAttributes => {
+      console.log('heroData', JSON.stringify(heroAttributes))
+      res.json(heroAttributes)
+    })
+    .catch((err) => {
+      console.log(`heroDataController.getSingleHeroAttributes - Error: ${err}`);
+      res.sendStatus(500);
+    });
+  },
 };
 
 module.exports = heroDataController;

@@ -1,6 +1,6 @@
 const db = require('../database/db');
 
-const HeroData = db.Model.extend({
+const HeroImages = db.Model.extend({
   tableName: 'hero_images',
   hasTimestamps: false,
   // gradeableobjects() {
@@ -8,4 +8,4 @@ const HeroData = db.Model.extend({
   // },
 });
 
-module.exports = db.model('HeroData', HeroData);
+module.exports = db.model('HeroImages', HeroImages);

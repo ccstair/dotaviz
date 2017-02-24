@@ -1,6 +1,6 @@
 export default function (state = [], action) {
   switch (action.type) {
-    case 'GET_HERO_DATA':
+    case 'GET_HERO_IMAGES':
       return action.payload.data;
     default:
       return state;
