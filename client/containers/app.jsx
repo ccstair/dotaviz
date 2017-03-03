@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import TextFilter from './filter/textfilter';
 import DotaTable from './table';
 import Graph from './graph';
 
 const App = () => (
-  <div>
-    <h1>Sups</h1>
+  <div className="mainPage">
+    <h1>DotaViz</h1>
     <Graph />
+    <TextFilter />
     <DotaTable />
   </div>
 );

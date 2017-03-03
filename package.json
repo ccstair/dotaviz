@@ -13,7 +13,8 @@
     "seed": "knex --cwd ./server/database/ seed:run",
     "db:migrate:make": "knex --cwd ./server/database/ migrate:make",
     "db:up": "knex --cwd ./server/database/ migrate:latest",
-    "db:down": "knex --cwd ./server/database/ migrate:rollback"
+    "db:down": "knex --cwd ./server/database/ migrate:rollback",
+    "sass": "sass --watch client/styles/input.scss:dist/styleoutput.css"
   },
   "keywords": [
     "data",

@@ -27,8 +27,6 @@ class Graph extends Component {
         data[j].fullMark = i * 5;
         data[j][this.props.heroLineup[i].name] = data[j].previousValues + this.props.heroLineup[i][data[j].attribute];
         data[j].previousValues += this.props.heroLineup[i][data[j].attribute];
-        console.log(this.props.heroLineup[i][data[j].attribute]);
-        console.log(data[j].previousValues);
       }
     }
 

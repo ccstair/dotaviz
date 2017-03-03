@@ -16,3 +16,10 @@ export function getHeroAttributes(id) {
     payload: request,
   };
 }
+
+export function filterHeroTable(event) {
+  return {
+    type: 'FILTER_HERO_TABLE',
+    payload: event,
+  };
+}

@@ -1,0 +1,40 @@
+.mainPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroCard {
+  &:hover {
+  background-color: lightgrey;
+  }
+  background-color: ghostwhite;
+  padding: 10px;
+  margin: 5px;
+}
+
+.heroCardImage {
+  width: 100px;
+}
+
+.heroTable {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+}
+
+.tableFilter {
+  height: 30px;
+  width: 500px;
+  font-size: 15px;
+  background-color: lightblue;
+}
+
+.clearField {
+  height: 35px;
+  margin: 5px;
+}
+
+#container {
+  background: white;
+}
